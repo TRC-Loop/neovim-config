@@ -12,6 +12,7 @@ vim.opt.rtp:prepend(lazypath)
 require("config.keymaps")
 require("lazy").setup("plugins")
 require('config.lsp')
+require('config.theme')
 
 vim.opt.smartindent = true
 vim.opt.autoindent = true

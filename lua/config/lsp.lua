@@ -32,3 +32,12 @@ try_setup('ts_ls')
 try_setup('gopls')
 try_setup('bashls')
 try_setup('powershell_es')
+
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●', -- Could be '■', '▎', '●'
+    spacing = 2,
+  },
+  signs = true,
+  underline = true,
+})

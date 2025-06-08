@@ -1,24 +1,34 @@
+
 local lspconfig = require('lspconfig')
 
--- LSP setups for all requested languages
-lspconfig.pyright.setup {}
-lspconfig.lua_ls.setup {
-  settings = {
-    Lua = { diagnostics = { globals = { 'vim' } } }
-  }
-}
-lspconfig.clangd.setup {}          -- C, C++
-lspconfig.omnisharp.setup {}       -- C#
-lspconfig.jdtls.setup {}           -- Java
-lspconfig.kotlin_language_server = lspconfig.kotlin_language_server or nil -- fallback if installed
-if lspconfig.kotlin_language_server then
-  lspconfig.kotlin_language_server.setup {}
+-- Helper to safely setup LSP if installed
+local function try_setup(server, config)
+  if lspconfig[server] then
+    lspconfig[server].setup(config or {})
+  end
 end
-lspconfig.intelephense.setup {}    -- PHP
-lspconfig.html.setup {}
-lspconfig.cssls.setup {}
-lspconfig.ts_ls.setup {}     -- JS/TS
-lspconfig.gopls.setup {}
-lspconfig.bashls.setup {}
-lspconfig.powershell_es.setup {}   -- PowerShell
-lspconfig.markdownls.setup {}
+
+try_setup('pyright')
+
+try_setup('lua_ls', {
+  settings = {
+    Lua = {
+      runtime = { version = 'LuaJIT' },
+      diagnostics = { globals = { 'vim' } },
+      workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+      telemetry = { enable = false },
+    }
+  }
+})
+
+try_setup('clangd')
+try_setup('omnisharp')
+try_setup('jdtls')
+try_setup('kotlin_language_server')
+try_setup('intelephense')
+try_setup('html')
+try_setup('cssls')
+try_setup('ts_ls')
+try_setup('gopls')
+try_setup('bashls')
+try_setup('powershell_es')

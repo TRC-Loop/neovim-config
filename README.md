@@ -1,5 +1,9 @@
 # TRCLoop's Nvim Config
 
+<p align="center">
+  <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/rocket.svg" width=360>
+</p>
+
 > [!NOTE]  
 > This Config is not finished and is **WIP**
 

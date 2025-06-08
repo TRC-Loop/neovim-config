@@ -2,6 +2,23 @@
 
 ## 🚀 Get Started
 
+### Prerequisites
+- Neovim of course: [Install](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+- Luarocks (recommended): [Install](https://github.com/luarocks/luarocks/wiki/Download)
+- Nerdfont (Meslo): [Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
+- Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal)
+
+### Install Command
+
+> [!IMPORTANT]  
+> Make sure your Neovim Config Directory is empty/non-existent. Delete it using
+> ```bash
+> rm -rf ~/.config/nvim
+> ```
+
+
+
+
 ```bash
 git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
 ```

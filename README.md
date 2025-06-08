@@ -63,4 +63,4 @@ Change Datetime format in `lua/plugins/lualine.lua` in the `datetime` function.
 Used for the CMDLine. Delete to have the default CMDLine.
 
 ### 🚗 [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
-Used for CMDLine Autocompletion. Use ´<tab>´
+Used for CMDLine Autocompletion. Use `<tab>`

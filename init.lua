@@ -12,3 +12,8 @@ vim.opt.rtp:prepend(lazypath)
 require("config.keymaps")
 require("lazy").setup("plugins")
 
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.expandtab = true       -- use spaces instead of tabs
+vim.opt.shiftwidth = 2         -- number of spaces per indent
+vim.opt.tabstop = 2            -- number of spaces a tab counts for

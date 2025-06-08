@@ -40,7 +40,12 @@ git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
 
 ```bash
 pip install pyright
-````
+```
+
+**Lua:**
+
+https://luals.github.io/#neovim-install
+
 
 ---
 

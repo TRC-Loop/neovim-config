@@ -46,7 +46,11 @@ pip install pyright
 
 https://luals.github.io/#neovim-install
 
+**Go:**
 
+```bash
+go install golang.org/x/tools/gopls@latest
+```
 ---
 
 Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopener noreferrer">💤Lazy</a>

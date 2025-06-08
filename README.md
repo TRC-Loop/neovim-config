@@ -4,6 +4,12 @@
   <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/rocket.svg" width=360>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/github/actions/workflow/status/TRC-Loop/neovim-config/nvim-health.yml?style=for-the-badge&logo=neovim&label=NVIM%20HEALTHCHECK">
+  <img src="https://img.shields.io/github/repo-size/TRC-Loop/neovim-config?style=for-the-badge">
+  <img src="https://img.shields.io/github/stars/TRC-Loop/neovim-config?style=for-the-badge&logo=github">
+</p>
+
 > [!NOTE]  
 > This Config is not finished and is **WIP**
 

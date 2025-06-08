@@ -30,11 +30,115 @@
 > ```
 
 
-
-
 ```bash
 git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
 ```
+
+### Install LSPs
+
+**Python:**
+
+Windows / MacOS / Linux:  
+```bash
+pip install pyright
+````
+
+**Lua:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g lua-language-server
+```
+
+**C / C++:**
+
+Install clangd via your package manager or from https://clangd.llvm.org/installation.html
+
+
+**C#:**
+
+Install OmniSharp from https://github.com/OmniSharp/omnisharp-roslyn/releases
+
+
+**Java:**
+
+Install Eclipse JDT Language Server (jdtls) via package manager or manual download
+
+
+**Kotlin:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g kotlin-language-server
+```
+
+**PHP:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g intelephense
+```
+
+**HTML:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g vscode-html-languageserver-bin
+```
+
+**CSS:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g vscode-css-languageserver-bin
+```
+
+**JavaScript / TypeScript:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g typescript typescript-language-server
+```
+
+**Go:**
+
+Windows / MacOS / Linux:
+
+```bash
+go install golang.org/x/tools/gopls@latest
+```
+
+**Bash:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g bash-language-server
+```
+
+**PowerShell:**
+
+Windows / MacOS / Linux:
+
+```bash
+# Install PowerShell Editor Services via PowerShellGet
+Install-Module -Name PowerShellEditorServices -Scope CurrentUser
+```
+
+**Markdown:**
+
+Windows / MacOS / Linux:
+
+```bash
+npm install -g markdown-language-server
+```
+
 ---
 
 Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopener noreferrer">💤Lazy</a>

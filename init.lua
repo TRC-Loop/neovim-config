@@ -17,3 +17,8 @@ vim.opt.autoindent = true
 vim.opt.expandtab = true       -- use spaces instead of tabs
 vim.opt.shiftwidth = 2         -- number of spaces per indent
 vim.opt.tabstop = 2            -- number of spaces a tab counts for
+vim.opt.clipboard = "unnamedplus"
+
+vim.opt.number = true
+vim.opt.relativenumber = true
+

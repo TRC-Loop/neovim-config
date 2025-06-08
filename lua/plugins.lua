@@ -4,4 +4,5 @@ return {
 	require("plugins.alpha"),
 	require("plugins.lualine"),
 	require("plugins.noice"),
+	require("plugins.nvim-cmp"),
 }

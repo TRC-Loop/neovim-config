@@ -1,5 +1,8 @@
 # TRCLoop's Nvim Config
 
+> [!NOTE]  
+> This Config is not finished and is **WIP**
+
 ## 🚀 Get Started
 
 ### Prerequisites

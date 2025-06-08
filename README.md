@@ -45,7 +45,7 @@ Open with `<leader>e` or `:Neotree toggle`
 ### [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 Open with `<leader>ff` or `<leader>fg` for Live-Grep
 
-### Alpha
+### [Alpha](https://github.com/goolord/alpha-nvim)
 Used for the nice Startup-Screen (`nvim`)
 
 ### Lualine

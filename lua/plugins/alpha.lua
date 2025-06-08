@@ -60,7 +60,8 @@ return {
       val = {
         dashboard.button("f", "󰈞  Find file", ":Telescope find_files<CR>"),
         dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
-        dashboard.button("n", "  New file", ":ene | startinsert<CR>"), -- Using | instead of <BAR> for clarity, both work
+        dashboard.button("n", "  New file", ":ene | startinsert<CR>"),
+        dashboard.button("t", " Terminal", ":ToggleTerm direction=horizontal<CR>"),
         dashboard.button("q", "󰗼  Quit", ":qa<CR>"),
       },
       opts = { spacing = 1, position = "center" },

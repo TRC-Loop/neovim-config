@@ -44,3 +44,11 @@ Open with `<leader>e` or `:Neotree toggle`
 
 ### [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 Open with `<leader>ff` or `<leader>fg` for Live-Grep
+
+### Alpha
+Used for the nice Startup-Screen (`nvim`)
+
+### Lualine
+Used for the nice little Status bar at the bottom.
+
+Change Datetime format in `lua/plugins/lualine.lua` in the `datetime` function.

@@ -1,5 +1,6 @@
 local function datetime()
-  return os.date("%Y-%m-%d %H:%M:%S") -- Configure your Datetime Format here.
+  -- return os.date("%d.%m.%Y %H:%M:%S") -- Configure your Datetime Format here.
+  return os.date("%c")
 end
 
 return {

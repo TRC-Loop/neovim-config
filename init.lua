@@ -24,3 +24,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+vim.api.nvim_create_autocmd("BufEnter", {
+  callback = function()
+    vim.opt.number = true
+    vim.opt.relativenumber = true
+  end,
+})

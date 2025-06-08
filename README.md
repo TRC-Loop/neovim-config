@@ -52,3 +52,6 @@ Used for the nice Startup-Screen (`nvim`)
 Used for the nice little Status bar at the bottom.
 
 Change Datetime format in `lua/plugins/lualine.lua` in the `datetime` function.
+
+### 👍 [Noice](https://github.com/folke/noice.nvim)
+Used for the CMDLine. Delete to have the default CMDLine.

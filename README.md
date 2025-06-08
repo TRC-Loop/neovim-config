@@ -39,16 +39,16 @@ Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopen
 
 ## 📦 Plugins
 
-### [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+### 🗂️ [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 Open with `<leader>e` or `:Neotree toggle`
 
-### [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+### 🔭 [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 Open with `<leader>ff` or `<leader>fg` for Live-Grep
 
-### [Alpha](https://github.com/goolord/alpha-nvim)
+### 🏁 [Alpha](https://github.com/goolord/alpha-nvim)
 Used for the nice Startup-Screen (`nvim`)
 
-### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
+### ℹ️ [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 Used for the nice little Status bar at the bottom.
 
 Change Datetime format in `lua/plugins/lualine.lua` in the `datetime` function.

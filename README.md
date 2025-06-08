@@ -48,7 +48,7 @@ Open with `<leader>ff` or `<leader>fg` for Live-Grep
 ### [Alpha](https://github.com/goolord/alpha-nvim)
 Used for the nice Startup-Screen (`nvim`)
 
-### Lualine
+### [Lualine](https://github.com/nvim-lualine/lualine.nvim)
 Used for the nice little Status bar at the bottom.
 
 Change Datetime format in `lua/plugins/lualine.lua` in the `datetime` function.

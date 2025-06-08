@@ -41,3 +41,6 @@ Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopen
 
 ### [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
 Open with `<leader>e` or `:Neotree toggle`
+
+### [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+Open with `<leader>ff` or `<leader>fg` for Live-Grep

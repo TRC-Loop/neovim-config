@@ -42,10 +42,6 @@ git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
 pip install pyright
 ````
 
-**Markdown:**
-```bash
-npm install -g markdown-language-server
-```
 ---
 
 Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopener noreferrer">💤Lazy</a>

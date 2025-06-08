@@ -10,6 +10,13 @@
   <img src="https://img.shields.io/github/stars/TRC-Loop/neovim-config?style=for-the-badge&logo=github">
 </p>
 
+<p align="center">
+  <strong>Screenshot</strong>
+</p>
+<p align="center">
+  <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/screenshot.webp">
+</p>
+
 > [!NOTE]  
 > This Config is not finished and is **WIP**
 

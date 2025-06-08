@@ -62,6 +62,7 @@ return {
         dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
         dashboard.button("n", "  New file", ":ene | startinsert<CR>"),
         dashboard.button("t", " Terminal", ":ToggleTerm direction=horizontal<CR>"),
+        dashboard.button("e", " Neotree", ":Neotree toggle<CR>"),
         dashboard.button("q", "󰗼  Quit", ":qa<CR>"),
       },
       opts = { spacing = 1, position = "center" },

@@ -66,24 +66,65 @@ Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopen
 
 `<leader>` is ` ` (space)
 
+Here’s the updated `## 📦 Plugins` section including all your listed plugins:
+
+---
+
 ## 📦 Plugins
 
 ### 🗂️ [Neotree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+
 Open with `<leader>e` or `:Neotree toggle`
 
 ### 🔭 [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+
 Open with `<leader>ff` or `<leader>fg` for Live-Grep
 
 ### 🏁 [Alpha](https://github.com/goolord/alpha-nvim)
+
 Used for the nice Startup-Screen (`nvim`)
 
 ### ℹ️ [Lualine](https://github.com/nvim-lualine/lualine.nvim)
-Used for the nice little Status bar at the bottom.
 
+Used for the nice little Status bar at the bottom.
 Change Datetime format in `lua/plugins/lualine.lua` in the `datetime` function.
 
 ### 👍 [Noice](https://github.com/folke/noice.nvim)
+
 Used for the CMDLine. Delete to have the default CMDLine.
 
 ### 🚗 [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+
 Used for CMDLine Autocompletion. Use `<tab>`
+
+### 💬 [Comment.nvim](https://github.com/numToStr/Comment.nvim)
+
+Toggle comments with `gcc` or `gc` in Visual mode.
+
+### 🪄 [nvim-autopairs](https://github.com/windwp/nvim-autopairs)
+
+Auto closes brackets, quotes, etc.
+
+### 🌳 [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+
+Better syntax highlighting and parsing.
+
+### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
+
+Open terminal with `<leader>t`.
+
+### 🎨 [catppuccin](https://github.com/catppuccin/nvim)
+
+Custom theme settings in `catppuccin-custom.lua`.
+
+### 🧠 [which-key.nvim](https://github.com/folke/which-key.nvim)
+
+Shows keybindings popup when you type a `<leader>` command.
+
+### 🧱 [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+
+Adds indentation guides.
+
+### 🔧 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+
+LSP support, config in `lsp.lua`.

@@ -66,9 +66,6 @@ Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopen
 
 `<leader>` is ` ` (space)
 
-Here’s the updated `## 📦 Plugins` section including all your listed plugins:
-
----
 
 ## 📦 Plugins
 

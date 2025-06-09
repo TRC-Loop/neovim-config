@@ -128,3 +128,7 @@ Adds indentation guides.
 ### 🔧 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 
 LSP support, config in `lsp.lua`.
+
+### 🕵️‍♂️ [git-blame](https://github.com/f-person/git-blame.nvim)
+
+Shows Git Info in Code.

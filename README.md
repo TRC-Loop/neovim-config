@@ -11,10 +11,11 @@
 </p>
 
 <p align="center">
-  <strong>Screenshot</strong>
+  <strong>Screenshots</strong>
 </p>
 <p align="center">
   <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/screenshot.webp">
+  <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/screenshot_code.webp">
 </p>
 
 > [!NOTE]  

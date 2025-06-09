@@ -1,6 +1,6 @@
 local function datetime()
-  -- return os.date("%d.%m.%Y %H:%M:%S") -- Configure your Datetime Format here.
-  return os.date("%c")
+  return os.date("%d.%m.%Y %H:%M:%S") -- Configure your Datetime Format here.
+  -- return os.date("%c")
 end
 
 return {
@@ -27,16 +27,16 @@ return {
             c = { fg = "#bbc2cf", bg = "#1f2227" },
           },
           insert = {
-            a = { fg = "#000000", bg = "#91f89c", gui = "bold" },
+            a = { fg = "#000000", bg = "#F7CD7A", gui = "bold" },
           },
           visual = {
-            a = { fg = "#000000", bg = "#91f89c", gui = "bold" },
+            a = { fg = "#000000", bg = "#F097DB", gui = "bold" },
           },
           replace = {
-            a = { fg = "#000000", bg = "#91f89c", gui = "bold" },
+            a = { fg = "#000000", bg = "#CFADFA", gui = "bold" },
           },
           command = {
-            a = { fg = "#000000", bg = "#91f89c", gui = "bold" },
+            a = { fg = "#000000", bg = "#ED7773", gui = "bold" },
           },
           inactive = {
             a = { fg = "#91f89c", bg = "#1f2227", gui = "bold" },
@@ -59,7 +59,12 @@ return {
         },
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
-        lualine_z = { "location", datetime },
+
+        lualine_z = {
+          "location",
+          datetime,
+          function() return "🚀" end,
+        },
       },
     }
   end,

@@ -35,7 +35,7 @@ try_setup('powershell_es')
 
 vim.diagnostic.config({
   virtual_text = {
-    prefix = '●', -- Could be '■', '▎', '●'
+    prefix = '▎', -- Could be '■', '▎', '●'
     spacing = 2,
   },
   signs = true,

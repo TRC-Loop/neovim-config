@@ -5,6 +5,14 @@
 </p>
 
 <p align="center">
+  <a href="https://dotfyle.com/TRC-Loop/neovim-config"><img src="https://dotfyle.com/TRC-Loop/neovim-config/badges/plugins?style=for-the-badge" /></a>
+  <a href="https://dotfyle.com/TRC-Loop/neovim-config"><img src="https://dotfyle.com/TRC-Loop/neovim-config/badges/leaderkey?style=for-the-badge" /></a>
+  <a href="https://dotfyle.com/TRC-Loop/neovim-config"><img src="https://dotfyle.com/TRC-Loop/neovim-config/badges/plugin-manager?style=for-the-badge" /></a>
+</p>
+<p align="center">
+  https://dotfyle.com/TRC-Loop/neovim-config
+</p>
+<p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/TRC-Loop/neovim-config/nvim-health.yml?style=for-the-badge&logo=neovim&label=NVIM%20HEALTHCHECK">
   <img src="https://img.shields.io/github/repo-size/TRC-Loop/neovim-config?style=for-the-badge">
   <img src="https://img.shields.io/github/stars/TRC-Loop/neovim-config?style=for-the-badge&logo=github">

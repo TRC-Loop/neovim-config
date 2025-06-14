@@ -30,6 +30,7 @@
 - Luarocks (recommended): [Install](https://github.com/luarocks/luarocks/wiki/Download)
 - Nerdfont (Meslo): [Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
 - Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal)
+- C Compiler (like [gcc](https://gcc.gnu.org) or [clang](https://clang.llvm.org))
 
 ### Install Command
 

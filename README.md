@@ -18,8 +18,10 @@
   <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/screenshot_code.webp">
 </p>
 
+<!--
 > [!NOTE]  
 > This Config is not finished and is **WIP**
+-->
 
 ## 🚀 Get Started
 
@@ -130,3 +132,7 @@ LSP support, config in `lsp.lua`.
 ### 🕵️‍♂️ [git-blame](https://github.com/f-person/git-blame.nvim)
 
 Shows Git Info in Code.
+
+### 👾[neocord](https://github.com/IogaMaster/neocord)
+
+Adds Discord RPC so your friends know what you're up to. Config: `lua/config/neocord.lua`

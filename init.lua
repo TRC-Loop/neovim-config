@@ -42,3 +42,5 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end
 })
 
+vim.cmd("command! Wq wq")
+vim.cmd("command! WQ wq")

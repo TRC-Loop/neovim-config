@@ -9,3 +9,7 @@ vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
 
 vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<CR>", { noremap = true, silent = true })
+
+vim.cmd("command! Wq wq")
+vim.cmd("command! WQ wq")
+

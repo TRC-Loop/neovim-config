@@ -168,6 +168,10 @@ Adds Discord RPC so your friends know what you're up to. Config: `lua/config/neo
 
 Shows Breadcrumbs in top of the window (eg. in which function you are)
 
+### 🎇 [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+
+Highlights same words with an underline when hovering.
+
 ## 💡 Ideas
 
 Maybe make a Macro on your keyboard which automatically installs nvim, with this config!

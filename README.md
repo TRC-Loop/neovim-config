@@ -149,3 +149,7 @@ Shows Git Info in Code.
 ### 👾[neocord](https://github.com/IogaMaster/neocord)
 
 Adds Discord RPC so your friends know what you're up to. Config: `lua/config/neocord.lua`
+
+### 🥖 [nvim-navic](https://github.com/SmiteshP/nvim-navic)
+
+Shows Breadcrumbs in top of the window (eg. in which function you are)

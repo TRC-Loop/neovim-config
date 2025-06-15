@@ -51,11 +51,25 @@
 > ```bash
 > rm -rf ~/.config/nvim
 > ```
+> *or windows (Powershell) `Remove-Item -Recurse -Force $env:LOCALAPPDATA\nvim`, cmd: `rmdir /s /q %LOCALAPPDATA%\nvim
+`*
 
+**MacOS/Linux:**
 
 ```bash
 git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
 ```
+
+**Windows CMD**
+```batch
+git clone https://github.com/TRC-Loop/neovim-config.git %LOCALAPPDATA%\nvim
+```
+
+**Windows Powershell**
+```powershell
+git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
+```
+
 
 ### Install LSPs
 
@@ -153,3 +167,11 @@ Adds Discord RPC so your friends know what you're up to. Config: `lua/config/neo
 ### 🥖 [nvim-navic](https://github.com/SmiteshP/nvim-navic)
 
 Shows Breadcrumbs in top of the window (eg. in which function you are)
+
+## 💡 Ideas
+
+Maybe make a Macro on your keyboard which automatically installs nvim, with this config!
+
+## 📥 Contributing
+
+If you've got an Idea which plugin could be added, open a pull request or an Issue, i appreciate all ideas!

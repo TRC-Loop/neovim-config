@@ -43,5 +43,8 @@ vim.api.nvim_create_autocmd("BufReadPost", {
   end
 })
 
+
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+
 vim.cmd("command! Wq wq")
 vim.cmd("command! WQ wq")

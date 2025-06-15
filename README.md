@@ -5,6 +5,14 @@
 </p>
 
 <p align="center">
+  <a href="https://dotfyle.com/TRC-Loop/neovim-config"><img src="https://dotfyle.com/TRC-Loop/neovim-config/badges/plugins?style=for-the-badge" /></a>
+  <a href="https://dotfyle.com/TRC-Loop/neovim-config"><img src="https://dotfyle.com/TRC-Loop/neovim-config/badges/leaderkey?style=for-the-badge" /></a>
+  <a href="https://dotfyle.com/TRC-Loop/neovim-config"><img src="https://dotfyle.com/TRC-Loop/neovim-config/badges/plugin-manager?style=for-the-badge" /></a>
+</p>
+<p align="center">
+  https://dotfyle.com/TRC-Loop/neovim-config
+</p>
+<p align="center">
   <img src="https://img.shields.io/github/actions/workflow/status/TRC-Loop/neovim-config/nvim-health.yml?style=for-the-badge&logo=neovim&label=NVIM%20HEALTHCHECK">
   <img src="https://img.shields.io/github/repo-size/TRC-Loop/neovim-config?style=for-the-badge">
   <img src="https://img.shields.io/github/stars/TRC-Loop/neovim-config?style=for-the-badge&logo=github">
@@ -18,8 +26,14 @@
   <img src="https://github.com/TRC-Loop/neovim-config/blob/main/.github/static/screenshot_code.webp">
 </p>
 
+> *Dog does not come with Neovim config!*
+
+
+
+<!--
 > [!NOTE]  
 > This Config is not finished and is **WIP**
+-->
 
 ## 🚀 Get Started
 
@@ -28,6 +42,7 @@
 - Luarocks (recommended): [Install](https://github.com/luarocks/luarocks/wiki/Download)
 - Nerdfont (Meslo): [Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
 - Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal)
+- C Compiler (like [gcc](https://gcc.gnu.org) or [clang](https://clang.llvm.org))
 
 ### Install Command
 
@@ -130,3 +145,7 @@ LSP support, config in `lsp.lua`.
 ### 🕵️‍♂️ [git-blame](https://github.com/f-person/git-blame.nvim)
 
 Shows Git Info in Code.
+
+### 👾[neocord](https://github.com/IogaMaster/neocord)
+
+Adds Discord RPC so your friends know what you're up to. Config: `lua/config/neocord.lua`

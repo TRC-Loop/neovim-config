@@ -175,3 +175,7 @@ Maybe make a Macro on your keyboard which automatically installs nvim, with this
 ## 📥 Contributing
 
 If you've got an Idea which plugin could be added, open a pull request or an Issue, i appreciate all ideas!
+
+---
+
+<img src="https://raw.githubusercontent.com/TRC-Loop/neovim-config/refs/heads/main/.github/static/footer.svg">

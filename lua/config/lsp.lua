@@ -34,9 +34,11 @@ try_setup("omnisharp")
 try_setup("jdtls")
 try_setup("kotlin_language_server")
 try_setup("intelephense")
-try_setup("html")
+try_setup("html", {
+  cmd = { "html-languageserver", "--stdio" },
+})
 try_setup("cssls")
-try_setup("ts_ls") -- kept as requested
+try_setup("ts_ls")
 try_setup("gopls")
 try_setup("bashls")
 try_setup("powershell_es")

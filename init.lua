@@ -46,3 +46,6 @@ vim.api.nvim_create_autocmd("BufReadPost", {
 
 vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
 
+vim.api.nvim_create_user_command("Boil", function()
+  vim.fn.feedkeys("iboil<Tab>")
+end, {})

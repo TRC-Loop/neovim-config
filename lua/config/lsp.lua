@@ -52,3 +52,11 @@ vim.diagnostic.config({
   signs = true,
   underline = true,
 })
+
+-- File Types
+
+vim.filetype.add({
+  extension = {
+    j2 = "html",
+  }
+})

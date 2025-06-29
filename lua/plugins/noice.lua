@@ -19,13 +19,16 @@ return {
             height = "auto",
           },
           border = {
-            style = "solid",
+            style = "rounded",
             text = {
-              top = "-Command-",
+              top = "Command",
             },
           },
         },
       },
     })
+    local bg = "#151624"
+    vim.api.nvim_set_hl(0, "NoiceCmdlinePopup",       { bg = bg, fg = "#ffffff" })
+    vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { bg = bg, fg = "#5f5f87" })
   end,
 }

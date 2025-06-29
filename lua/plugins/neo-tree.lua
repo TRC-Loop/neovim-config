@@ -9,8 +9,21 @@ return {
     },
     opts = {
       window = {
-        position = "right",   
-        width = 20,   
+        position = "right",
+        width = 20,
+        mappings = {
+          ["<CR>"] = function(state)
+            local node = state.tree:get_node()
+            local path = node and node.path
+            local type = node and node.type
+
+            if type == "file" and path then
+              vim.cmd("tabnew " .. vim.fn.fnameescape(path))
+            elseif type == "directory" then
+              require("neo-tree.sources.filesystem").toggle_directory(state, node)
+            end
+          end,
+        },
       },
     },
   },

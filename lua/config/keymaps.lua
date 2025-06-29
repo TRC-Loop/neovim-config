@@ -13,3 +13,6 @@ vim.keymap.set("n", "<leader>t", "<cmd>ToggleTerm direction=horizontal<CR>", { n
 vim.cmd("command! Wq wq")
 vim.cmd("command! WQ wq")
 
+vim.keymap.set('n', '<leader>+', ':tabnew<CR>', { desc = 'New Tab' })
+vim.keymap.set('n', '<leader>-', ':tabclose<CR>', { desc = 'Close Tab' })
+vim.keymap.set('n', '<leader>tt', ':tabs<CR>', { desc = 'List Tabs' })

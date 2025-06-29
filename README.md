@@ -43,6 +43,8 @@
 - Nerdfont (Meslo): [Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
 - Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal)
 - C Compiler (like [gcc](https://gcc.gnu.org) or [clang](https://clang.llvm.org))
+- [Python](https://python.org) (with pip) for LSP's
+- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for LSP's
 
 ### Install Command
 
@@ -88,6 +90,18 @@ https://luals.github.io/#neovim-install
 ```bash
 go install golang.org/x/tools/gopls@latest
 ```
+
+**PHP:**
+```bash
+npm install -g intelephense
+```
+
+**HTML:**
+
+```bash
+npm install -g vscode-html-languageserver-bin
+```
+
 ---
 
 Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopener noreferrer">💤Lazy</a>

@@ -16,3 +16,9 @@ vim.cmd("command! WQ wq")
 vim.keymap.set('n', '<leader>+', ':tabnew<CR>', { desc = 'New Tab' })
 vim.keymap.set('n', '<leader>-', ':tabclose<CR>', { desc = 'Close Tab' })
 vim.keymap.set('n', '<leader>tt', ':tabs<CR>', { desc = 'List Tabs' })
+vim.keymap.set('n', '<leader>l', ':tabnext<CR>', { desc = 'Next Tab' })
+vim.keymap.set('n', '<leader>h', ':tabprevious<CR>', { desc = 'Previous Tab' })
+
+for i = 1, 9 do
+  vim.keymap.set('n', '<leader>' .. i, i .. 'gt', { desc = 'Go to Tab ' .. i })
+end

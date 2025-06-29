@@ -14,6 +14,7 @@ require("lazy").setup("plugins")
 require('config.lsp')
 require('config.theme')
 require('config.neocord')
+require('config.telescope')
 
 vim.opt.smartindent = true
 vim.opt.autoindent = true

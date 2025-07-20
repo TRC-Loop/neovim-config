@@ -52,3 +52,9 @@ vim.api.nvim_create_user_command("Boil", function()
 end, {})
 
 vim.o.termguicolors = true
+
+vim.opt.colorcolumn = "120"
+
+vim.cmd [[
+  highlight ColorColumn ctermbg=15 guibg=#2e3440
+]]

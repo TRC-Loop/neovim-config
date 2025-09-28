@@ -73,7 +73,9 @@ git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
 ```
 
 
-### Install LSPs
+### Install LSPs (Outdated)
+
+**Use Mason instead `:Mason<Enter>`
 
 **Python:**
 

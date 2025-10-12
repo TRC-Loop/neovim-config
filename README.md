@@ -154,7 +154,7 @@ Better syntax highlighting and parsing.
 
 ### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
-Open terminal with `<leader>t`. Close it by typing `exit` in the Terminal.
+Open terminal with `<control>t`. Close it by typing `exit` in the Terminal.
 
 ### 🎨 [catppuccin](https://github.com/catppuccin/nvim)
 

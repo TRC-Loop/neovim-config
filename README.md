@@ -152,6 +152,17 @@ Auto closes brackets, quotes, etc.
 
 Better syntax highlighting and parsing.
 
+| Motion        | Effect                        |
+| ------------- | ----------------------------- |
+| ⁠ vaf ⁠         | select *a function* (outer) |
+| ⁠ vif ⁠         | select *inside a function*  |
+| ⁠ vap ⁠ / ⁠ vip ⁠ | select *parameter list*     |
+| ⁠ vac ⁠ / ⁠ vic ⁠ | select *class block*        |
+| ⁠ vaC ⁠ / ⁠ viC ⁠ | select *conditional block*  |
+| ⁠ daf ⁠         | delete function               |
+| ⁠ yaf ⁠         | yank function                 |
+
+
 ### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
 Open terminal with `<control>t`. Close it by typing `exit` in the Terminal.

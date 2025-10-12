@@ -56,7 +56,16 @@ vim.diagnostic.config({
 -- File Types
 
 vim.filetype.add({
-  extension = {
-    j2 = { "html", "jinja", "php" },
-  },
+  extension = { j2 = "php" },
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "php",
+  callback = function()
+    if vim.fn.expand("%:e") == "j2" then
+      vim.cmd([[syntax include @jinja syntax/jinja.vim]])
+      vim.cmd([[syntax region jinjaRegion start="{{" end="}}" contains=@jinja]])
+      vim.cmd([[syntax region jinjaTag start="{%" end="%}" contains=@jinja]])
+    end
+  end,
 })

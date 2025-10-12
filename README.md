@@ -39,14 +39,24 @@
 
 ### Prerequisites
 - Neovim of course: [Install](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+  > Install using `snap`, `dnf`, `pacman` on Linux eg. `sudo snap install neovim`
 - Luarocks (recommended): [Install](https://github.com/luarocks/luarocks/wiki/Download)
-- Nerdfont (Meslo): [Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
-- Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal)
+  > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install luarocks`
+- Nerdfont: [Download (Meslo)](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
+  > Use any font you'd like. The Font in the Screenshots is Meslo.
+- Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal), [kitty (cross-platform)](https://sw.kovidgoyal.net/kitty/binary/)
+  > The terminal should support a custom font and colors
 - C Compiler (like [gcc](https://gcc.gnu.org) or [clang](https://clang.llvm.org))
+- [Go](https://go.dev)
+  > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install go`
 - [Python](https://python.org) (with pip) for LSP's
 - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for LSP's
+- [Git](https://git-scm.com)
+   > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install git`
+   
+   > Git is often pre-installed.
 
-### Install Command
+## Installation
 
 > [!IMPORTANT]  
 > Make sure your Neovim Config Directory is empty/non-existent. Delete it using
@@ -72,12 +82,31 @@ git clone https://github.com/TRC-Loop/neovim-config.git %LOCALAPPDATA%\nvim
 git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
 ```
 
+### Update Config
 
-### Install LSPs (Outdated)
+> [!CAUTION]
+> **Custom tweaks** you have done to the config will be **lost**.
 
-**Use Mason instead `:Mason<Enter>`
+**MacOS/Linux:**
+```bash
+rm -rf ~/.config/nvim && git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
+```
 
-**Python:**
+**Windows Powershell:**
+```bash
+Remove-Item -Recurse -Force $env:LOCALAPPDATA\nvim; git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
+```
+
+
+### Install LSPs
+
+> [!WARNING]  
+> Instead of installing LSPs manually, use `Mason`: `:Mason<Enter>`
+> [How to use Mason](https://github.com/TRC-Loop/neovim-config/tree/main?tab=readme-ov-file#%EF%B8%8F-mason)
+<details closed>
+  <summary>Old Commands (Manual)</summary>
+  
+  **Python:**
 
 ```bash
 pip install pyright
@@ -103,8 +132,9 @@ npm install -g intelephense
 ```bash
 npm install -g vscode-html-languageserver-bin
 ```
+</details>
 
----
+
 
 Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopener noreferrer">💤Lazy</a>
 
@@ -152,6 +182,17 @@ Auto closes brackets, quotes, etc.
 
 Better syntax highlighting and parsing.
 
+| Motion        | Effect                        |
+| ------------- | ----------------------------- |
+| ⁠ `vaf` ⁠         | select *a function* (outer) |
+| ⁠ `vif`⁠         | select *inside a function*  |
+| ⁠ `vap` ⁠ / ⁠ `vip`⁠ | select *parameter list*     |
+| ⁠ `vac`⁠ / ⁠ `vic` ⁠ | select *class block*        |
+| ⁠ `vaC` ⁠ / ⁠ `viC` ⁠ | select *conditional block*  |
+| ⁠ `daf` ⁠         | delete function               |
+| ⁠ `yaf` ⁠         | yank function                 |
+
+
 ### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
 Open terminal with `<control>t`. Close it by typing `exit` in the Terminal.
@@ -192,6 +233,22 @@ Highlights same words with an underline when hovering.
 
 Says what it does.
 `ysiw'` Makes the current work surrounded with `'` *Before:* `test-123` *After:* `'test-123'`
+
+### ⚒️ [Mason](https://github.com/mason-org/mason.nvim)
+
+Mason is used for managing LSPs.
+
+Open with: `:Mason<Enter>`
+
+| Motion in Mason    | Effect                        |
+| ------------- | ----------------------------- |
+| ⁠ `i` ⁠         | install |
+| ⁠ `u`⁠         | update  |
+
+> [!IMPORTANT]  
+> Installing Mason packages often requires: `cargo`, `go`, `npm` and `pip`
+> *It is recommended to first install those package managers!*
+
 
 ## 💡 Ideas
 

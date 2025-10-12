@@ -258,6 +258,16 @@ Maybe make a Macro on your keyboard which automatically installs nvim, with this
 
 If you've got an Idea which plugin could be added, open a pull request or an Issue, i appreciate all ideas!
 
+## ⌨️ Cool Keyboard shortcuts
+
+*Add your own*
+
+Can be used as a **Cheat-Sheet**
+
+- `gUiw`: Make the word you are on full uppercase. eg. `test` -> `TEST`
+- `ysiw'`: Make the word surrounded by `'` eg. `test` -> `'test'`
+- `zz`, `zt`, `zb`: Change the view relative to the cursor
+
 ---
 
 <img src="https://raw.githubusercontent.com/TRC-Loop/neovim-config/refs/heads/main/.github/static/footer.svg">

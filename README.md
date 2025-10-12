@@ -188,6 +188,11 @@ Shows Breadcrumbs in top of the window (eg. in which function you are)
 
 Highlights same words with an underline when hovering.
 
+### ⿸ [vim-surround](https://github.com/tpope/vim-surround)
+
+Says what it does.
+`ysiw'` Makes the current work surrounded with `'` *Before:* `test-123` *After:* `'test-123'`
+
 ## 💡 Ideas
 
 Maybe make a Macro on your keyboard which automatically installs nvim, with this config!

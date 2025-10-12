@@ -73,11 +73,14 @@ git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
 ```
 
 
-### Install LSPs (Outdated)
+### Install LSPs
 
-**Use Mason instead `:Mason<Enter>`
-
-**Python:**
+> [!WARNING]  
+> Instead of Installing LSPs manually, use `Mason`: `:Mason<Enter>`
+<details closed>
+  <summary>Old Commands (Manual)</summary>
+  
+  **Python:**
 
 ```bash
 pip install pyright
@@ -103,8 +106,9 @@ npm install -g intelephense
 ```bash
 npm install -g vscode-html-languageserver-bin
 ```
+</details>
 
----
+
 
 Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopener noreferrer">💤Lazy</a>
 
@@ -154,13 +158,13 @@ Better syntax highlighting and parsing.
 
 | Motion        | Effect                        |
 | ------------- | ----------------------------- |
-| ⁠ vaf ⁠         | select *a function* (outer) |
-| ⁠ vif ⁠         | select *inside a function*  |
-| ⁠ vap ⁠ / ⁠ vip ⁠ | select *parameter list*     |
-| ⁠ vac ⁠ / ⁠ vic ⁠ | select *class block*        |
-| ⁠ vaC ⁠ / ⁠ viC ⁠ | select *conditional block*  |
-| ⁠ daf ⁠         | delete function               |
-| ⁠ yaf ⁠         | yank function                 |
+| ⁠ `vaf` ⁠         | select *a function* (outer) |
+| ⁠ `vif`⁠         | select *inside a function*  |
+| ⁠ `vap` ⁠ / ⁠ `vip`⁠ | select *parameter list*     |
+| ⁠ `vac`⁠ / ⁠ `vic` ⁠ | select *class block*        |
+| ⁠ `vaC` ⁠ / ⁠ `viC` ⁠ | select *conditional block*  |
+| ⁠ `daf` ⁠         | delete function               |
+| ⁠ `yaf` ⁠         | yank function                 |
 
 
 ### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)

@@ -57,6 +57,6 @@ vim.diagnostic.config({
 
 vim.filetype.add({
   extension = {
-    j2 = "html",
-  }
+    j2 = { "html", "jinja", "php" },
+  },
 })

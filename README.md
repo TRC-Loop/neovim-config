@@ -39,14 +39,24 @@
 
 ### Prerequisites
 - Neovim of course: [Install](https://github.com/neovim/neovim/blob/master/INSTALL.md)
+  > Install using `snap`, `dnf`, `pacman` on Linux eg. `sudo snap install neovim`
 - Luarocks (recommended): [Install](https://github.com/luarocks/luarocks/wiki/Download)
-- Nerdfont (Meslo): [Download](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
-- Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal)
+  > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install luarocks`
+- Nerdfont: [Download (Meslo)](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Meslo.zip), [All Fonts](https://www.nerdfonts.com/font-downloads)
+  > Use any font you'd like. The Font in the Screenshots is Meslo.
+- Supported Terminal: [MacOS iTerm2](https://iterm2.com), [Windows Terminal](https://github.com/microsoft/terminal), [kitty (cross-platform)](https://sw.kovidgoyal.net/kitty/binary/)
+  > The terminal should support a custom font and colors
 - C Compiler (like [gcc](https://gcc.gnu.org) or [clang](https://clang.llvm.org))
+- [Go](https://go.dev)
+  > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install go`
 - [Python](https://python.org) (with pip) for LSP's
 - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for LSP's
+- [Git](https://git-scm.com)
+   > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install git`
+   
+   > Git is often pre-installed.
 
-### Install Command
+## Installation
 
 > [!IMPORTANT]  
 > Make sure your Neovim Config Directory is empty/non-existent. Delete it using
@@ -72,11 +82,27 @@ git clone https://github.com/TRC-Loop/neovim-config.git %LOCALAPPDATA%\nvim
 git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
 ```
 
+### Update Config
+
+> [!CAUTION]
+> **Custom tweaks** you have done to the config will be **lost**.
+
+**MacOS/Linux:**
+```bash
+rm -rf ~/.config/nvim && git clone https://github.com/TRC-Loop/neovim-config.git ~/.config/nvim
+```
+
+**Windows Powershell:**
+```bash
+Remove-Item -Recurse -Force $env:LOCALAPPDATA\nvim; git clone https://github.com/TRC-Loop/neovim-config.git $env:LOCALAPPDATA\nvim
+```
+
 
 ### Install LSPs
 
 > [!WARNING]  
-> Instead of Installing LSPs manually, use `Mason`: `:Mason<Enter>`
+> Instead of installing LSPs manually, use `Mason`: `:Mason<Enter>`
+> [How to use Mason]
 <details closed>
   <summary>Old Commands (Manual)</summary>
   
@@ -207,6 +233,22 @@ Highlights same words with an underline when hovering.
 
 Says what it does.
 `ysiw'` Makes the current work surrounded with `'` *Before:* `test-123` *After:* `'test-123'`
+
+### ⚒️ [Mason](https://github.com/mason-org/mason.nvim)
+
+Mason is used for managing LSPs.
+
+Open with: `:Mason<Enter>`
+
+| Motion in Mason    | Effect                        |
+| ------------- | ----------------------------- |
+| ⁠ `i` ⁠         | install |
+| ⁠ `u`⁠         | update  |
+
+> [!IMPORTANT]  
+> Installing Mason packages often requires: `cargo`, `go`, `npm` and `pip`
+> *It is recommended to first install those package managers!*
+
 
 ## 💡 Ideas
 

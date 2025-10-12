@@ -102,7 +102,7 @@ Remove-Item -Recurse -Force $env:LOCALAPPDATA\nvim; git clone https://github.com
 
 > [!WARNING]  
 > Instead of installing LSPs manually, use `Mason`: `:Mason<Enter>`
-> [How to use Mason]
+> [How to use Mason](https://github.com/TRC-Loop/neovim-config/tree/main?tab=readme-ov-file#%EF%B8%8F-mason)
 <details closed>
   <summary>Old Commands (Manual)</summary>
   

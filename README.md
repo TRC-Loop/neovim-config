@@ -154,7 +154,7 @@ Better syntax highlighting and parsing.
 
 ### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
 
-Open terminal with `<leader>t`. Close it by typing `exit` in the Terminal.
+Open terminal with `<control>t`. Close it by typing `exit` in the Terminal.
 
 ### 🎨 [catppuccin](https://github.com/catppuccin/nvim)
 
@@ -187,6 +187,11 @@ Shows Breadcrumbs in top of the window (eg. in which function you are)
 ### 🎇 [vim-illuminate](https://github.com/RRethy/vim-illuminate)
 
 Highlights same words with an underline when hovering.
+
+### ⿸ [vim-surround](https://github.com/tpope/vim-surround)
+
+Says what it does.
+`ysiw'` Makes the current work surrounded with `'` *Before:* `test-123` *After:* `'test-123'`
 
 ## 💡 Ideas
 

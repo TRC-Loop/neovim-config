@@ -44,7 +44,7 @@ M.setup = function()
     },
   })
 
-  vim.cmd.colorscheme("catppuccin")
+  vim.cmd.colorscheme("catppuccin-nvim")
 end
 
 return M

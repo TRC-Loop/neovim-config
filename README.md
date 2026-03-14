@@ -31,7 +31,7 @@
 
 
 <!--
-> [!NOTE]  
+> [!NOTE]
 > This Config is not finished and is **WIP**
 -->
 
@@ -53,12 +53,14 @@
 - [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) for LSP's
 - [Git](https://git-scm.com)
    > Install using `apt`, `dnf`, `pacman` on Linux eg. `sudo apt install git`
-   
+
    > Git is often pre-installed.
+- [ripgrep](https://github.com/BurntSushi/ripgrep) for Telescope live grep
+  > Install using `brew install ripgrep`, `apt install ripgrep`, `pacman -S ripgrep`
 
 ## Installation
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Make sure your Neovim Config Directory is empty/non-existent. Delete it using
 > ```bash
 > rm -rf ~/.config/nvim
@@ -100,12 +102,12 @@ Remove-Item -Recurse -Force $env:LOCALAPPDATA\nvim; git clone https://github.com
 
 ### Install LSPs
 
-> [!WARNING]  
+> [!WARNING]
 > Instead of installing LSPs manually, use `Mason`: `:Mason<Enter>`
 > [How to use Mason](https://github.com/TRC-Loop/neovim-config/tree/main?tab=readme-ov-file#%EF%B8%8F-mason)
 <details closed>
   <summary>Old Commands (Manual)</summary>
-  
+
   **Python:**
 
 ```bash
@@ -141,6 +143,23 @@ Runs on <a href="https://github.com/folke/lazy.nvim" target="_blank" rel="noopen
 ## 💻 Keybinds
 
 `<leader>` is ` ` (space)
+
+| Keybind | Action |
+| --- | --- |
+| `<leader>ff` | Find files (Telescope) |
+| `<leader>fg` | Live grep (Telescope) |
+| `<leader>e` | Toggle Neo-tree |
+| `<leader>+` | New tab |
+| `<leader>-` | Close tab |
+| `<leader>tt` | List tabs |
+| `<leader>l` / `<leader>h` | Next / Previous tab |
+| `<leader>1`-`9` | Go to tab 1-9 |
+| `<leader>rn` | Rename symbol (LSP) |
+| `<leader>mt` | Tidy markdown table |
+| `gd` | Go to definition |
+| `K` | Hover info |
+| `gcc` | Toggle comment (line) |
+| `gc` | Toggle comment (visual) |
 
 
 ## 📦 Plugins
@@ -184,18 +203,13 @@ Better syntax highlighting and parsing.
 
 | Motion        | Effect                        |
 | ------------- | ----------------------------- |
-| ⁠ `vaf` ⁠         | select *a function* (outer) |
-| ⁠ `vif`⁠         | select *inside a function*  |
-| ⁠ `vap` ⁠ / ⁠ `vip`⁠ | select *parameter list*     |
-| ⁠ `vac`⁠ / ⁠ `vic` ⁠ | select *class block*        |
-| ⁠ `vaC` ⁠ / ⁠ `viC` ⁠ | select *conditional block*  |
-| ⁠ `daf` ⁠         | delete function               |
-| ⁠ `yaf` ⁠         | yank function                 |
-
-
-### 🚪 [ToggleTerm](https://github.com/akinsho/toggleterm.nvim)
-
-Open terminal with `<control>t`. Close it by typing `exit` in the Terminal.
+| ⁠ `vaf` ⁠         | select *a function* (outer) |
+| ⁠ `vif`⁠         | select *inside a function*  |
+| ⁠ `vap` ⁠ / ⁠ `vip`⁠ | select *parameter list*     |
+| ⁠ `vac`⁠ / ⁠ `vic` ⁠ | select *class block*        |
+| ⁠ `vaC` ⁠ / ⁠ `viC` ⁠ | select *conditional block*  |
+| ⁠ `daf` ⁠         | delete function               |
+| ⁠ `yaf` ⁠         | yank function                 |
 
 ### 🎨 [catppuccin](https://github.com/catppuccin/nvim)
 
@@ -205,21 +219,17 @@ Custom theme settings in `catppuccin-custom.lua`.
 
 Shows keybindings popup when you type a `<leader>` command.
 
-### 🧱 [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-
-Adds indentation guides.
-
 ### 🔧 [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 
-LSP support, config in `lsp.lua`.
+LSP support, config in `lua/plugins/lsp.lua`.
 
 ### 🕵️‍♂️ [git-blame](https://github.com/f-person/git-blame.nvim)
 
 Shows Git Info in Code.
 
-### 👾[neocord](https://github.com/IogaMaster/neocord)
+### 👾 [neocord](https://github.com/IogaMaster/neocord)
 
-Adds Discord RPC so your friends know what you're up to. Config: `lua/config/neocord.lua`
+Adds Discord RPC so your friends know what you're up to. Config: `lua/plugins/neocord.lua`
 
 ### 🥖 [nvim-navic](https://github.com/SmiteshP/nvim-navic)
 
@@ -234,6 +244,10 @@ Highlights same words with an underline when hovering.
 Says what it does.
 `ysiw'` Makes the current work surrounded with `'` *Before:* `test-123` *After:* `'test-123'`
 
+### 🍿 [snacks.nvim](https://github.com/folke/snacks.nvim)
+
+Collection of small QoL plugins: indent guides, big file handling, quick file open, notifications, and more.
+
 ### ⚒️ [Mason](https://github.com/mason-org/mason.nvim)
 
 Mason is used for managing LSPs.
@@ -242,10 +256,10 @@ Open with: `:Mason<Enter>`
 
 | Motion in Mason    | Effect                        |
 | ------------- | ----------------------------- |
-| ⁠ `i` ⁠         | install |
-| ⁠ `u`⁠         | update  |
+| ⁠ `i` ⁠         | install |
+| ⁠ `u`⁠         | update  |
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Installing Mason packages often requires: `cargo`, `go`, `npm` and `pip`
 > *It is recommended to first install those package managers!*
 

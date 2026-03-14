@@ -1,9 +1,3 @@
-vim.g.mapleader = " "
-
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find Files" })
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live Grep" })
-vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Neo-tree" })
-
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename)
@@ -23,11 +17,11 @@ for i = 1, 9 do
 end
 
 vim.api.nvim_create_autocmd("QuitPre", {
-    callback = function()
-        for _, buf in ipairs(vim.api.nvim_list_bufs()) do
-            if vim.bo[buf].buftype == "terminal" then
-                vim.fn.jobstop(vim.b[buf].terminal_job_id)
-            end
-        end
-    end,
+  callback = function()
+    for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+      if vim.bo[buf].buftype == "terminal" then
+        vim.fn.jobstop(vim.b[buf].terminal_job_id)
+      end
+    end
+  end,
 })

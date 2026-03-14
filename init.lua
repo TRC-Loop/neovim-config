@@ -1,6 +1,22 @@
--- bootstrap lazy.nvim
+vim.g.mapleader = " "
+
+-- Options (loaded before plugins for faster startup)
+vim.opt.smartindent = true
+vim.opt.autoindent = true
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
+vim.opt.clipboard = "unnamedplus"
+vim.opt.termguicolors = true
+vim.opt.colorcolumn = "120"
+vim.wo.number = true
+vim.wo.relativenumber = true
+
+require("config.keymaps")
+
+-- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
     "git", "clone", "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
@@ -9,23 +25,24 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("config.keymaps")
-require("lazy").setup("plugins")
-require('config.lsp')
-require('config.theme')
-require('config.neocord')
-require('config.telescope')
+require("lazy").setup("plugins", {
+  performance = {
+    rtp = {
+      disabled_plugins = {
+        "gzip",
+        "matchit",
+        "matchparen",
+        "netrwPlugin",
+        "tarPlugin",
+        "tohtml",
+        "tutor",
+        "zipPlugin",
+      },
+    },
+  },
+})
 
-vim.opt.smartindent = true
-vim.opt.autoindent = true
-vim.opt.expandtab = true       -- use spaces instead of tabs
-vim.opt.shiftwidth = 2         -- number of spaces per indent
-vim.opt.tabstop = 2            -- number of spaces a tab counts for
-vim.opt.clipboard = "unnamedplus"
-
-vim.opt.number = true
-vim.opt.relativenumber = true
-
+-- Autocmds
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     vim.opt.number = true
@@ -41,20 +58,27 @@ vim.api.nvim_create_autocmd("BufReadPost", {
     if mark[1] > 0 and mark[1] <= lcount then
       vim.api.nvim_win_set_cursor(0, mark)
     end
-  end
+  end,
 })
 
-
-vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
-
 vim.api.nvim_create_user_command("Boil", function()
-  vim.fn.feedkeys("iboil<Tab>")
+  vim.fn.feedkeys("iboil\t")
 end, {})
 
-vim.o.termguicolors = true
+vim.cmd [[highlight ColorColumn ctermbg=15 guibg=#2e3440]]
 
-vim.opt.colorcolumn = "120"
+-- File types
+vim.filetype.add({
+  extension = { j2 = "php" },
+})
 
-vim.cmd [[
-  highlight ColorColumn ctermbg=15 guibg=#2e3440
-]]
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "php",
+  callback = function()
+    if vim.fn.expand("%:e") == "j2" then
+      vim.cmd([[syntax include @jinja syntax/jinja.vim]])
+      vim.cmd([[syntax region jinjaRegion start="{{" end="}}" contains=@jinja]])
+      vim.cmd([[syntax region jinjaTag start="{%" end="%}" contains=@jinja]])
+    end
+  end,
+})

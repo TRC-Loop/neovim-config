@@ -3,7 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     local alpha = require("alpha")
-    local dashboard = require("alpha.themes.dashboard") -- Load the dashboard theme helpers
+    local dashboard = require("alpha.themes.dashboard")
 
     vim.api.nvim_set_hl(0, "AppleGreen", { fg = "#91f89c" })
     vim.api.nvim_set_hl(0, "AppleYellow", { fg = "#f7cd7a" })
@@ -54,15 +54,13 @@ return {
       })
     end
 
-    -- Refactored buttons using dashboard.button
     local buttons = {
       type = "group",
       val = {
         dashboard.button("f", "󰈞  Find file", ":Telescope find_files<CR>"),
-        dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
-        dashboard.button("n", "  New file", ":ene | startinsert<CR>"),
-        dashboard.button("t", " Terminal", ":ToggleTerm direction=horizontal<CR>"),
-        dashboard.button("e", " Neotree", ":Neotree toggle<CR>"),
+        dashboard.button("r", "  Recent files", ":Telescope oldfiles<CR>"),
+        dashboard.button("n", "  New file", ":ene | startinsert<CR>"),
+        dashboard.button("e", " Neotree", ":Neotree toggle<CR>"),
         dashboard.button("l", "󰒲 Lazy", ":Lazy<CR>"),
         dashboard.button("q", "󰗼  Quit", ":qa<CR>"),
       },
@@ -75,14 +73,14 @@ return {
       opts = { hl = "Comment", position = "center" },
     }
 
-    local layout = {
+    alpha.setup({
       layout = {
         { type = "padding", val = 4 },
-        header_sections[1], -- AppleGreen
-        header_sections[2], -- AppleYellow
-        header_sections[3], -- AppleRed
-        header_sections[4], -- ApplePink
-        header_sections[5], -- ApplePurple
+        header_sections[1],
+        header_sections[2],
+        header_sections[3],
+        header_sections[4],
+        header_sections[5],
         { type = "padding", val = 6 },
         buttons,
         { type = "padding", val = 2 },
@@ -90,8 +88,6 @@ return {
         { type = "padding", val = 3 },
       },
       opts = {},
-    }
-
-    alpha.setup(layout)
+    })
   end,
 }

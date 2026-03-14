@@ -1,6 +1,8 @@
-return { "timantipov/md-table-tidy.nvim",
-    opts = {
-      padding = 1,
-      key = "<leader>tt",
-    }
+return {
+  "timantipov/md-table-tidy.nvim",
+  ft = "markdown",
+  opts = {
+    padding = 1,
+    key = "<leader>mt",
+  },
 }

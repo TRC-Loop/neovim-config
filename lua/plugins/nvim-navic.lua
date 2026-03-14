@@ -1,10 +1,11 @@
 return {
   "SmiteshP/nvim-navic",
-  dependencies = { "neovim/nvim-lspconfig" },
-  config = function()
-    require("nvim-navic").setup({
-      highlight = true,
-      separator = " > ",
-    })
+  lazy = true,
+  opts = {
+    highlight = true,
+    separator = " > ",
+  },
+  init = function()
+    vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
   end,
 }

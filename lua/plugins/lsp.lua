@@ -12,7 +12,24 @@ return {
 
       -- Servers and their configs
       local servers = {
-        pyright = {},
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                autoImportCompletions = true,
+                typeCheckingMode = "basic",
+              },
+            },
+            pyright = {
+              inlayHints = {
+                functionReturnTypes = true,
+                variableTypes = true,
+                callArgumentNames = "all",
+                pytestParameters = true,
+              },
+            },
+          },
+        },
         lua_ls = {
           settings = {
             Lua = {
@@ -28,7 +45,18 @@ return {
         omnisharp = {},
         jdtls = {},
         kotlin_language_server = {},
-        intelephense = {},
+        intelephense = {
+          settings = {
+            intelephense = {
+              hints = {
+                parameterNames = true,
+                parameterTypes = true,
+                returnTypes = true,
+                variableTypes = true,
+              },
+            },
+          },
+        },
         html = { cmd = { "html-languageserver", "--stdio" } },
         cssls = {},
         ts_ls = {

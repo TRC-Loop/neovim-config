@@ -9,12 +9,14 @@ return {
       "hrsh7th/cmp-cmdline",
       "saadparwaiz1/cmp_luasnip",
       "L3MON4D3/LuaSnip",
+      "onsails/lspkind.nvim",
     },
-    opts = function()
+    config = function()
       local cmp = require("cmp")
       local luasnip = require("luasnip")
+      local lspkind = require("lspkind")
 
-      local insert_opts = {
+      cmp.setup({
         snippet = {
           expand = function(args)
             luasnip.lsp_expand(args.body)
@@ -43,34 +45,31 @@ return {
           end, { "i", "s" }),
         }),
         sources = cmp.config.sources({
-          { name = "nvim_lsp" },
-          { name = "luasnip" },
-          { name = "buffer" },
-          { name = "path" },
+          { name = "nvim_lsp", priority = 1000 },
+          { name = "luasnip", priority = 750 },
+          { name = "buffer", priority = 500 },
+          { name = "path", priority = 250 },
         }),
-      }
+        formatting = {
+          format = lspkind.cmp_format({
+            mode = "symbol_text",
+            maxwidth = 50,
+            ellipsis_char = "...",
+          }),
+        },
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered(),
+        },
+      })
 
-      local cmdline_opts = {
+      cmp.setup.cmdline(":", {
         mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources({
           { name = "path" },
           { name = "cmdline" },
         }),
-      }
-
-      return {
-        insert = insert_opts,
-        cmdline = cmdline_opts,
-      }
-    end,
-    config = function(_, opts)
-      local cmp = require("cmp")
-
-      -- Insert mode setup
-      cmp.setup(opts.insert)
-
-      -- Cmdline mode setup
-      cmp.setup.cmdline(":", opts.cmdline)
+      })
       cmp.setup.cmdline("/", {
         mapping = cmp.mapping.preset.cmdline(),
         sources = { { name = "buffer" } },

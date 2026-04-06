@@ -125,6 +125,23 @@ return {
       end
       vim.lsp.enable(vim.tbl_keys(servers))
 
+      -- ccl-lsp (not in Mason registry, registered manually)
+      local lspconfig = require("lspconfig")
+      local lspconfig_configs = require("lspconfig.configs")
+      if not lspconfig_configs.ccl_lsp then
+        lspconfig_configs.ccl_lsp = {
+          default_config = {
+            cmd = { "ccl-lsp" },
+            filetypes = { "ccl" },
+            root_dir = lspconfig.util.root_pattern(".git", ".ccolonfmt"),
+            single_file_support = true,
+          },
+        }
+      end
+      lspconfig.ccl_lsp.setup({
+        capabilities = capabilities,
+      })
+
       -- Attach navic + enable inlay hints on LspAttach
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
